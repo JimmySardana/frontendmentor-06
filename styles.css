@@ -17,10 +17,15 @@ main {
     justify-content: center;
 }
 
+.card-container {
+    width: 87.5%;
+    margin: auto;
+}
+
 .container {
+    box-shadow: 0px 1px 19px 3px rgba(155,155,155,0.58);
     border-radius: .5rem;
     overflow: hidden;
-    width: 85%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -125,10 +130,13 @@ main {
 
 @media screen and (min-width: 750px) {
     .container {
-        max-width: 685px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: min-content min-content;
         align-content: center;
+    }
+
+    .card-container {
+        max-width: 685px;
     }
 
     .container .card-1 {
@@ -140,18 +148,5 @@ main {
     .card {
         padding: 2rem;
         padding-bottom: 2.5rem;
-    }
-
-    .card-1 {
-        z-index: -1;
-        border-radius: .5rem .5rem 0 0;
-    }
-
-    .card-2 {
-        border-radius: 0 0 0 .5rem;
-    }
-
-    .card-3 {
-        border-radius: 0 0 .5rem 0;
     }
 }
