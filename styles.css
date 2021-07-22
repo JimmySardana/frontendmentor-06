@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-family: Karla;
+    background-color: hsl(204, 43%, 93%);
+}
+
+main {
+    min-height: 100vh;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    border-radius: .5rem;
+    overflow: hidden;
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.card-1 {
+    background-color: white;
+}
+
+.card-1 h1 {
+    color: hsl(179, 62%, 43%);
+}
+
+.card-1 p:nth-of-type(1) {
+    color: hsl(71, 73%, 54%);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card-1 p:nth-of-type(2) {
+    color: hsl(218, 22%, 67%);
+}
+
+.card-2 {
+    display: flex;
+    flex-direction: column;
+    color: hsl(204, 43%, 93%);
+    background-color: #2bb3b1;
+}
+
+.card-2 button {
+    margin-top: 2rem;
+    max-width: 270px;
+    border: none;
+    border-radius: .5em;
+    background-color: hsl(71, 73%, 54%);
+    padding: 1rem 0;
+    font-weight: 700;
+    color: hsla(203, 44%, 93%, 0.781);
+    box-shadow: 0px 5px 29px -6px #545454;
+}
+
+
+
+.price span:nth-of-type(1) {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.price span:nth-of-type(2) {
+    padding-left: .8rem;
+    color: hsla(203, 44%, 93%, 0.781);
+}
+
+.price {
+    padding-bottom: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.card-2 > span {
+    flex-grow: 1;
+}
+
+.card-3 {
+    color: hsla(203, 44%, 93%, 0.781);
+    background-color: #4abebd;
+}
+
+.card-3 p {
+    padding-right: 3rem;
+}
+
+.card {
+    padding: 1.5rem;
+}
+
+.card h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+}
+
+@media screen and (min-width: 400px) and (max-width: 750px) {
+    .card {
+        text-align: center;
+    }
+
+    .card-3 p {
+        padding: 0;
+    }
+
+    .card-2 {
+        align-items: center;
+    }
+
+    .card-2 button {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 750px) {
+    .container {
+        max-width: 685px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content min-content;
+        align-content: center;
+    }
+
+    .container .card-1 {
+        grid-area: span 1 / span 2;
+        padding-bottom: 3.2rem;
+        padding-right: 3rem;
+    }
+
+    .card {
+        padding: 2rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .card-1 {
+        z-index: -1;
+        border-radius: .5rem .5rem 0 0;
+    }
+
+    .card-2 {
+        border-radius: 0 0 0 .5rem;
+    }
+
+    .card-3 {
+        border-radius: 0 0 .5rem 0;
+    }
+}
